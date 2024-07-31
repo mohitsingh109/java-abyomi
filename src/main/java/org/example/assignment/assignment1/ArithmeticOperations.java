@@ -48,7 +48,8 @@ public class ArithmeticOperations {
 
         // Increment and decrement operator
         int x = 33;
-        x++; // now 34
+        ++x; //now 34 first increment then return the value
+        //x++; // now 34 it first return and then increment
         x += 2; // now 36
         x--; // now 35
         x -= 5; // now 30
@@ -58,13 +59,28 @@ public class ArithmeticOperations {
         int y = 20;
         int complexResult1 = 100 / 10 * 6 - 92 % 9 + 100 / 10 * 2;
         int complexResult2 = 7 % 5 * -5 + 20 / 5 * 2 + 4 / 2 * (4 + 1) / 2;
-        int complexResult3 = (y++ * 5) + 10 - 3 * (y-- / 2); //88
-        int complexResult4 = (y++ + 10) * (5 + y--) - 2 * y; //704
+        int complexResult3 = (y++ * 5) + 10 - 3 * (y-- / 2); //80
+        // (20 * 5) // y = 21
+        // 100 + 10 - 3 * (21 / 2) y = 20
+        // 100 + 10 - 3 * 10
+        // 100 + 10 - 30
+        // 80
+
+        int complexResult4 = (y++ + 10) * (5 + y--) - 2 * y; //740
+        // (20 + 10) // y = 21
+        // 30 * (5 + 21) // y = 20
+        // 30 * 26 - 2 * 20
+        // 780 - 40
+        // 740
+
+        // y = 20
+        int complexResult5 = (++y * 5) + 10 - 3 * (--y / 2); // 85??
 
         // Print the result
         System.out.println("The final answer for complex 1 is " + complexResult1);
         System.out.println("The final answer for complex 2 is " + complexResult2);
         System.out.println("The final answer for complex 3 is " + complexResult3);
         System.out.println("The final answer for complex 4 is " + complexResult4);
+        System.out.println("The final answer for complex 5 is " + complexResult5);
     }
 }
