@@ -13,14 +13,9 @@ public class Student {
 
     // Default Constructor
     public Student() {
-        this.name = null;
-        this.age = 0;
-        this.studentID = null;
-        this.gpa = 0.0;
-        totalStudents++;
-        totalGPA += this.gpa;
+        this(null, 0, null,0.0);
     }
-
+//
     // Parameterized Constructor
     public Student(String name, int age, String studentID, double gpa) {
         this.name = name;
@@ -30,15 +25,10 @@ public class Student {
         totalStudents++;
         totalGPA += this.gpa;
     }
-
+//
     // Overloaded Constructor
     public Student(String name, int age, String studentID) {
-        this.name = name;
-        this.age = age;
-        this.studentID = studentID;
-        this.gpa = 0.0;
-        totalStudents++;
-        totalGPA += this.gpa;
+        this(name, age, studentID, 0.0);
     }
 
     // Getter and Setter Methods
